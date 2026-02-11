@@ -1,0 +1,24 @@
+{
+  "name": "@universal-agent/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@universal-agent/db": "workspace:*",
+    "@universal-agent/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@universal-agent/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

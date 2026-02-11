@@ -1,0 +1,42 @@
+{
+  "name": "universal-agent",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "dotenv": "^17.2.2",
+      "zod": "^4.1.13",
+      "typescript": "^5",
+      "better-auth": "^1.4.18"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "db:push": "turbo -F @universal-agent/db db:push",
+    "db:studio": "turbo -F @universal-agent/db db:studio",
+    "db:generate": "turbo -F @universal-agent/db db:generate",
+    "db:migrate": "turbo -F @universal-agent/db db:migrate",
+    "check": "biome check --write ."
+  },
+  "dependencies": {
+    "@universal-agent/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@types/node": "^22.13.14",
+    "@universal-agent/config": "workspace:*",
+    "turbo": "^2.6.3",
+    "typescript": "catalog:"
+  },
+  "packageManager": "bun@1.3.1"
+}
