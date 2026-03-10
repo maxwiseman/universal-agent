@@ -24,6 +24,7 @@
     "db:studio": "turbo -F @universal-agent/db db:studio",
     "db:generate": "turbo -F @universal-agent/db db:generate",
     "db:migrate": "turbo -F @universal-agent/db db:migrate",
+    "build:web": "turbo -F web build",
     "check": "biome check --write ."
   },
   "dependencies": {

@@ -1,0 +1,21 @@
+{
+  "name": "@universal-agent/ai",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "dependencies": {
+    "@ai-sdk/gateway": "^3.0.43",
+    "ai": "^6.0.83",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@universal-agent/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
